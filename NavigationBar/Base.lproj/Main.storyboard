@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ff-LL-Ap0">
+                                <rect key="frame" x="0.0" y="33" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bq7-kN-F87"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Navigation Bar" id="qPN-aD-feI">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="xTm-9s-NqM"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="cV8-iF-vFx"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PV-B2-nqO">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0rG-XU-er5"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="organize" id="2hW-s7-tAF"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ppp-1A-GED"/>
+                                    <barButtonItem title="Item" systemItem="cancel" id="UCg-VM-3km"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="6ff-LL-Ap0" secondAttribute="trailing" constant="-20" id="0gX-n5-xp6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3PV-B2-nqO" secondAttribute="trailing" constant="-20" id="ELF-Sp-2fw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3PV-B2-nqO" secondAttribute="bottom" id="OvN-MO-lXL"/>
+                            <constraint firstItem="6ff-LL-Ap0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="c9Z-Yj-cQf"/>
+                            <constraint firstItem="3PV-B2-nqO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="u7s-dM-i4m"/>
+                            <constraint firstItem="6ff-LL-Ap0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="xKi-si-zKv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
